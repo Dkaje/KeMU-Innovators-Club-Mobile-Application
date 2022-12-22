@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10sp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circle_center"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/kemu" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/circle_center"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10sp"
+                android:text="Kenya Methodist University"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text"
+                android:layout_marginTop="10sp"
+                app:cardCornerRadius="12sp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/myUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2sp"
+                        android:background="@drawable/backy"
+                        android:drawableLeft="@drawable/user"
+                        android:hint="Registration/Employee Number"
+                        android:inputType="textCapCharacters"
+                        android:padding="10sp" />
+
+                    <TextView
+                        android:id="@+id/templeReg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/myUser"
+                        android:text="text Reg"
+                        android:textColor="#ff0000"
+                        android:textStyle="italic"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <EditText
+                android:id="@+id/fname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardy"
+                android:layout_marginTop="10sp"
+                android:background="@drawable/backy"
+                android:digits="ABOCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:hint="Firstname"
+                android:inputType="textCapCharacters"
+                android:maxLength="18"
+                android:padding="10sp" />
+
+            <EditText
+                android:id="@+id/lname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fname"
+                android:layout_marginTop="10sp"
+                android:background="@drawable/backy"
+                android:digits="ABOCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:hint="Lastname"
+                android:inputType="textCapCharacters"
+                android:maxLength="18"
+                android:padding="10sp" />
+
+
+            <RadioGroup
+                android:id="@+id/radioGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lname"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <RadioButton
+                    android:id="@+id/radioButtonGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Check Gender" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female" />
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGender"
+                android:layout_marginTop="10sp"
+                android:background="@drawable/backy"
+                android:hint="Phone"
+                android:inputType="number"
+                android:maxLength="10"
+                android:padding="10sp" />
+
+            <TextView
+                android:id="@+id/templePhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phone"
+                android:text="text Reg"
+                android:textColor="#ff0000"
+                android:textStyle="italic"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/templePhone"
+                android:layout_marginTop="10sp"
+                android:background="@drawable/backy"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"
+                android:maxLength="50"
+                android:padding="10sp" />
+
+            <TextView
+                android:id="@+id/templeEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/email"
+                android:text="text Reg"
+                android:textColor="#ff0000"
+                android:textStyle="italic"
+                android:visibility="gone" />
+
+            <Spinner
+                android:id="@+id/department"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/templeEmail"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="10sp" />
+
+            <Spinner
+                android:id="@+id/classification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/department"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10sp"
+                android:visibility="gone" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardtwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/classification"
+                android:layout_marginTop="10sp"
+                app:cardCornerRadius="12sp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2sp"
+                    android:background="@drawable/backy">
+
+                    <EditText
+                        android:id="@+id/myPass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/see"
+                        android:drawableLeft="@drawable/log"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:maxLength="10"
+                        android:padding="10sp" />
+
+                    <ImageView
+                        android:id="@+id/see"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:padding="10sp"
+                        android:src="@drawable/see" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/conf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardtwo"
+                android:layout_marginTop="10sp"
+                app:cardCornerRadius="12sp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2sp"
+                    android:background="@drawable/backy">
+
+                    <EditText
+                        android:id="@+id/myConfirm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/see4"
+                        android:drawableLeft="@drawable/log"
+                        android:hint="Confirm Password"
+                        android:inputType="textPassword"
+                        android:maxLength="10"
+                        android:padding="10sp" />
+
+                    <ImageView
+                        android:id="@+id/see4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:padding="10sp"
+                        android:src="@drawable/see" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

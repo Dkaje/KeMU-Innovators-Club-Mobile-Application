@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10sp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/inn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/inner">
+
+                <com.github.gcacace.signaturepad.views.SignaturePad
+                    android:id="@+id/signature_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    app:penColor="@android:color/black" />
+                <!--<com.github.gcacace.signaturepad.views.SignaturePad
+                    android:id="@+id/signature_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    sign:backgroundColor="#ffffff"
+                    sign:enableSignature="true"
+                    sign:penColor="#000000"
+                    sign:penSize="5dp" />
+                <com.kyanogen.signatureview.SignatureView
+                    android:id="@+id/signature_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    sign:backgroundColor="#ffffff"
+                    sign:enableSignature="true"
+                    sign:penColor="#000000"
+                    sign:penSize="5dp" />-->
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/inn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10sp"
+                android:text="Sign in the box above"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Stud.StuHome">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="10sp"
+        android:visibility="gone"
+        app:cardCornerRadius="10sp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/major">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5sp">
+
+                <Button
+                    android:id="@+id/btnProf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:background="@color/white"
+                    android:text="Profile" />
+
+                <Button
+                    android:id="@+id/btnHelp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/btnProf"
+                    android:layout_marginTop="5sp"
+                    android:background="@color/white"
+                    android:text="Help" />
+
+                <Button
+                    android:id="@+id/btnOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/btnHelp"
+                    android:layout_marginTop="5sp"
+                    android:background="@color/white"
+                    android:text="Logout" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/Generali"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cardy"
+        android:layout_toEndOf="@+id/mejaGen">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/topper"
+            style="@style/MenuItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="-15dp"
+            android:layout_toEndOf="@+id/myMenu"
+            android:background="@color/white"
+            app:itemBackground="@color/white"
+            app:itemIconTint="@drawable/haina_mambo"
+            app:itemTextAppearance="@style/MenuItems"
+            app:itemTextColor="@drawable/haina_mambo"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/mhoozi" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/myMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/menuu" />
+
+        <android.widget.SearchView
+            android:id="@+id/seacrhed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topper"
+            android:queryHint="Search here.." />
+
+        <TableLayout
+            android:id="@+id/tabulated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/seacrhed">
+
+            <TableRow android:padding="5dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="CATEGORY"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="FEES"
+                    android:textStyle="bold" />
+            </TableRow>
+        </TableLayout>
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btnActive"
+            android:layout_below="@+id/tabulated" />
+
+        <Button
+            android:id="@+id/btnActive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Active Session"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mejaGen"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cardy"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btnPast">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnSmart"
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:text="SmartCard"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnWithdrawal"
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnSmart"
+                    android:text="Courses"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnEvent"
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnWithdrawal"
+                    android:text="Payments"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnParty"
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnEvent"
+                    android:text="Event\nPayment"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnCon"
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnParty"
+                    android:text="Contribution"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnSystem"
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnCon"
+                    android:text="Feedback"
+                    android:textStyle="bold" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/myExit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnSystem"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/exit" />
+            </RelativeLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btnPast"
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Past Sessions"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</RelativeLayout>

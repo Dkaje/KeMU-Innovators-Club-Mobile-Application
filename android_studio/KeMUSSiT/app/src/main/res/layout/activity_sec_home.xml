@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:background="@color/white"
+    tools:context=".Secgen.SecHome">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="10sp"
+        android:visibility="gone"
+        app:cardCornerRadius="10sp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/major">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5sp">
+
+                <Button
+                    android:id="@+id/btnProf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:background="@color/white"
+                    android:text="Profile" />
+
+                <Button
+                    android:id="@+id/btnHelp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/btnProf"
+                    android:layout_marginTop="5sp"
+                    android:background="@color/white"
+                    android:text="Help" />
+
+                <Button
+                    android:id="@+id/btnOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/btnHelp"
+                    android:layout_marginTop="5sp"
+                    android:background="@color/white"
+                    android:text="Logout" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnActive"
+        android:layout_below="@+id/cardy">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnCardy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Manage Cards"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnIssue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnCardy"
+                android:layout_toStartOf="@+id/btnRenew"
+                android:text="Issue Cards"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnRenew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnCardy"
+                android:layout_alignParentEnd="true"
+                android:text="My Card"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnEvent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnIssue"
+                android:text="Announcements"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnParty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnEvent"
+                android:text="Feedback"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnGone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Past"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnActive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/btnGone"
+        android:text="Active Session"
+        android:textStyle="bold" />
+</RelativeLayout>

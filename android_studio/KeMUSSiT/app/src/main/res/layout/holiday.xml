@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Relative"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/Generali"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.widget.SearchView
+            android:id="@+id/truSerc"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:queryHint="Search here.." />
+
+        <TableLayout
+            android:id="@+id/tabulated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/truSerc">
+
+            <TableRow android:padding="5dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="CATEGORY"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="FEES"
+                    android:textStyle="bold" />
+            </TableRow>
+        </TableLayout>
+
+        <ListView
+            android:id="@+id/truList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tabulated" />
+
+    </RelativeLayout>
+</RelativeLayout>

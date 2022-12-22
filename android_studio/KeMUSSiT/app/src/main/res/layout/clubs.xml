@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/myClub"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/club" />
+
+    <TextView
+        android:id="@+id/txtClub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5sp"
+        android:layout_toEndOf="@+id/myClub"
+        android:shadowColor="@color/major"
+        android:shadowDx="-2"
+        android:shadowDy="-2"
+        android:shadowRadius="15"
+        android:text="Clubs"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+</RelativeLayout>

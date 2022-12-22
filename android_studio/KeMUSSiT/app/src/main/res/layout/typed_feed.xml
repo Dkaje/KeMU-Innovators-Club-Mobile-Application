@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5sp"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/wave_test" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circle_center"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/kemu" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/circle_center"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="1sp"
+                android:text="[KEMUSSit]~Kenya Methodist University"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/sumeer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text"
+                android:layout_marginTop="2sp"
+                app:cardCornerRadius="12sp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp">
+
+                    <TextView
+                        android:id="@+id/trueKabisa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Help us know your experience."
+                        android:textColor="#000"
+                        android:textStyle="bold|italic" />
+
+                    <EditText
+                        android:id="@+id/mySub"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/trueKabisa"
+                        android:hint="Enter some feedback here!!"
+                        android:maxLength="100"
+                        android:textColor="#000" />
+
+                    <RelativeLayout
+                        android:id="@+id/Mkuu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mySub"
+                        android:layout_alignParentEnd="true"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/kaleshe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="100"
+                            android:textColor="#ff0000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/adela"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10sp"
+                            android:layout_toEndOf="@+id/kaleshe"
+                            android:text="/100"
+                            android:textColor="#000"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sumeer"
+                android:background="@drawable/wave_one" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

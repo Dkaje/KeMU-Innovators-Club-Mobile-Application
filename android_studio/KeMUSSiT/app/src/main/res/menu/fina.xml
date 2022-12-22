@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/App"
+        android:icon="@drawable/approved"
+        android:title="Approved"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/Rej"
+        android:icon="@drawable/reje"
+        android:title="Rejected"
+        app:showAsAction="always" />
+</menu>

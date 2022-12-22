@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5sp">
+
+    <TextView
+        android:id="@+id/meB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:shadowColor="@color/major"
+        android:shadowDx="-2"
+        android:shadowDy="-2"
+        android:shadowRadius="15"
+        android:text="Resetting all session activities"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/sawaLy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6sp"
+        android:layout_toEndOf="@+id/meB"
+        android:text="....."
+        android:textColor="@color/major"
+        android:textStyle="bold" />
+
+    <ProgressBar
+        android:id="@+id/progressor"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/meB"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10sp"
+        android:scaleY="3" />
+</RelativeLayout>

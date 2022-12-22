@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10sp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/myProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile:"
+                android:textColor="#000"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15sp"
+                android:layout_toEndOf="@+id/myProfile"
+                android:elevation="10sp"
+                app:cardCornerRadius="75dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/confirmed"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@color/major" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/mb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mes"
+                android:text="Holder:"
+                android:textColor="#000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/myBasic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mes"
+                android:layout_marginStart="5sp"
+                android:layout_toEndOf="@+id/mb"
+                android:text="Holder:"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/mySi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/myBasic"
+                android:layout_marginTop="5sp"
+                android:text="Signature:"
+                android:textColor="#000"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/mySign"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/myBasic"
+                android:layout_marginStart="-5sp"
+                android:layout_marginTop="-3sp"
+                android:layout_toEndOf="@+id/mySi"
+                android:src="@drawable/hide" />
+
+            <TextView
+                android:id="@+id/more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mySign"
+                android:text="Card:"
+                android:textColor="#000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/myCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mySign"
+                android:layout_marginStart="5sp"
+                android:layout_toEndOf="@+id/more"
+                android:text="Holder:"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/crt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/myCard"
+                android:text="Session:"
+                android:textColor="#000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/mySession"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/myCard"
+                android:layout_marginStart="5sp"
+                android:layout_toEndOf="@+id/crt"
+                android:text="Holder:"
+                android:textColor="#000" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

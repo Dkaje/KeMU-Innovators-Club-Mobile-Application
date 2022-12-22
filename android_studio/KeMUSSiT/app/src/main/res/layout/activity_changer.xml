@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="3sp"
+    tools:context=".Patron.Changer">
+
+    <android.widget.SearchView
+        android:id="@+id/seacrhed"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_toStartOf="@+id/btnPrint"
+        android:queryHint="search here.." />
+
+    <Button
+        android:id="@+id/btnPrint"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:text="Print"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/Printer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnSend"
+        android:layout_below="@+id/seacrhed">
+
+        <include
+            android:id="@+id/head"
+            layout="@layout/header" />
+
+        <TableLayout
+            android:id="@+id/tabulated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/head">
+
+            <TableRow android:padding="5dp">
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="#"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/myPay"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="REG_ID"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/myCate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="NAME"
+                    android:textStyle="bold" />
+            </TableRow>
+        </TableLayout>
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tabulated"
+            android:divider="@null"
+            android:dividerHeight="0dp" />
+    </RelativeLayout>
+</RelativeLayout>
